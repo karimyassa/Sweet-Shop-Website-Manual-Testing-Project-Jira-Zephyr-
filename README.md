@@ -44,7 +44,7 @@ Main Issues: Missing validations, broken UI elements, and checkout form bugs
 
 /Defects – Jira defect reports and screenshots
 
-/Jira-Zephyr-Links – Project screenshots and summaries
+/Attachments – Project screenshots and summaries
 
 🏁 Summary
 
