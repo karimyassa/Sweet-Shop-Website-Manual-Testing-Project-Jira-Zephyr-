@@ -1,0 +1,201 @@
+﻿Summary,Issue key,Issue Type,Priority,Description
+Basket → No option to decrease item quantity; user can only delete all items,SS-24,Bug,Medium,"*Steps to Reproduce:*
+# Open the Browse Sweets page.
+# Add the same sweet multiple times (e.g., add “Chocolate Cups” three times).
+# Go to the Basket page.
+# Observe the available actions for managing quantities.
+
+*Expected Results:*
+The basket should allow users to modify the quantity of an item — including increasing or decreasing the number of units — without having to remove the item completely.
+
+*Actual Results:*
+The basket only provides a Delete Item option.
+There is no option to reduce the quantity, forcing the user to delete the item entirely and re-add the desired quantity manually."
+Billing and Payment → CVV field incorrectly displays increment and decrement arrows,SS-23,Bug,Medium,"*Steps to Reproduce:*
+# Open the Checkout page.
+# Scroll down to the Payment section.
+# Click on the CVV input field.
+# Observe the presence of increment and decrement (up/down) arrows inside the field.
+
+*Expected Results:*
+The CVV field should be a plain numeric input box without any increment or decrement arrows.
+Users should only be able to type digits manually, as CVV values are not meant to be adjusted using arrow controls.
+
+*Actual Results:*
+The CVV field displays increment and decrement arrows, allowing users to increase or decrease the value using the arrows, which is inappropriate for CVV input."
+Basket and Shipping → Total price displays “NaN” when switching to Standard Shipping option,SS-22,Bug,Medium,"*Steps to Reproduce:*
+
+# Open the Checkout page after adding any item(s) to the basket.
+# Scroll to the Delivery section.
+# Switch the delivery option from Collect (FREE) to Standard Shipping (£1.99).
+# Observe the Total (GBP) field.
+
+*Expected Results:*
+The total price should update correctly to reflect the sum of the item(s) cost and the shipping fee (e.g., Item total + £1.99).
+
+*Actual Results:*
+When switching to Standard Shipping, the total displays as “£NaN” instead of the correct numeric value."
+Billing and Payment → → System accepts numbers and special characters in the “Name on card” field,SS-21,Bug,Medium,"*Steps to Reproduce:*
+# Open the Billing and Payment page.
+# Scroll to the Payment section.
+# Click on the Name on card input field.
+# Enter text containing numbers and symbols (e.g., “John123”, “John @Doe!”).
+# Click Continue to checkout.
+
+*Expected Results:*
+The “Name on card” field should accept only alphabetic characters and spaces.
+Any input containing numbers or special characters should trigger a validation error or prevent submission.
+
+*Actual Results:*
+The system accepts inputs with numbers and special characters in the “Name on card” field without any validation error."
+Billing and Payment → Expiration date field lacks proper MM/YY format or input guidance,SS-20,Bug,Medium,"Steps to Reproduce:
+Open the Billing and Payment page.
+Scroll down to the Payment section.
+Click on the Expiration field.
+Observe how the system handles input entry.
+
+Expected Results:
+The expiration date field should guide or enforce the correct format (MM/YY).
+Users should either see a placeholder (e.g., “MM/YY”) or have the slash (/) automatically inserted as they type.
+Only valid month and year values should be accepted.
+
+Actual Results:
+The expiration date field provides no placeholder or automatic formatting.
+Users must manually type the slash (/) and can enter values in an incorrect or unclear format, leading to potential input errors."
+Billing and Payment -> System accepts invalid expiration date formats and expired dates in the payment section,SS-19,Bug,Medium,"*Steps to Reproduce:*
+# Open the Billing and payment page.
+# Scroll to the Payment section.
+# Leave the Expiration field empty and attempt to submit → observe the validation.
+# Then, enter invalid data in the Expiration field, such as:
+# Alphabetic characters (e.g., “AB/CD”)
+# Special characters (e.g., “@@/##”)
+# Invalid dates (e.g., “13/45”)
+# Expired dates (e.g., “01/23”)
+# Click Continue to checkout after each input.
+
+*Expected Results:*
+The system should prevent submission if the Expiration field is empty or invalid.
+Only valid, non-expired dates in the MM/YY format should be accepted.
+
+*Actual Results:*
+The system correctly prevents submission when the field is left empty,
+but it accepts invalid inputs, including alphabetic characters, special characters, expired dates, and non-existent dates."
+Billing and Payment → System accepts letters and special characters in the card number field,SS-18,Bug,Medium,"Steps to Reproduce:
+Open the Billing and Payment page.
+Click on the Credit card number input field.
+Enter alphabetic characters (e.g., “abcd”), or special characters (e.g., “@#$%”).
+Attempt to proceed by clicking Continue to checkout.
+
+Expected Results:
+The system should only accept numeric input (0–9) in the card number field and reject letters or special characters.
+It should also restrict the maximum input length to 19 digits.
+
+Actual Results:
+The system accepts alphabetic and special characters in the card number field, though it correctly restricts input length to a maximum of 19 digits."
+Billing and payment -> system accepts trailing and leading space without omitting them,SS-17,Bug,Medium,"*Steps to Reproduce* 
+
+# open billing and payment page 
+# enter leading and trailing space in name fields 
+
+*Expected Results* 
+
+System automatically deletes trailing or leading space
+
+
+
+*Actual Results* 
+
+system accepts trailing and leading spaces "
+Billing and Payment -> system accepts more than 3 or 4 digits in CVV,SS-16,Bug,Medium,"*Steps to reproduce*
+# open the billing and payment page 
+# click on continue to check and observe fields 
+# select CVV field and type more than 4 digits and observe the field changing from red to green
+
+*Expected results*
+system rejects more than 4 digits and the field turns red again, signaling invalid inputs
+
+*Actual results*
+system accepts more than 4 digits and the field stays green"
+Billing and Payment → Form fields clear and no action occurs after clicking “Continue to checkout”,SS-15,Bug,Medium,"*Steps to Reproduce:*
+# Open the Checkout page.
+# Fill in all required fields in the Billing address and Payment sections (First name, Last name, Email, Address, Country, City, ZIP, Card details).
+# Click the Continue to checkout button.
+
+*Expected Results:*
+The system should validate the entered information and proceed to the next step of the checkout process (e.g., order confirmation or payment processing).
+All input data should remain intact unless a specific validation error occurs.
+
+*Actual Results:*
+After clicking Continue to checkout, no progress or confirmation occurs.
+All entered data is cleared from the fields, forcing the user to re-enter their information."
+Browse Sweets → No quantity selector available before adding items to the basket,SS-14,Bug,Medium,"Steps to Reproduce:
+Open the Browse Sweets page.
+Select any sweet (e.g., Chocolate Cups).
+Observe the product card and “Add to Basket” button.
+Try to select or input a quantity before clicking “Add to Basket.”
+
+Expected Results:
+Users should be able to select or input the number of items they wish to add (e.g., using a quantity field or dropdown) before adding to the basket.
+
+Actual Results:
+There is no option to specify quantity.
+The user must repeatedly click “Add to Basket” to add multiple units of the same sweet."
+Browse Sweets → Basket icon and top navigation bar not visible when scrolling down the page,SS-13,Bug,Medium,"*Steps to Reproduce:*
+# Open the Browse Sweets page.
+# Scroll down until several product rows are visible.
+
+*Expected Results:*
+The top navigation bar (including Basket icon, Login, About, and Sweets links) should remain visible or fixed (sticky header) while scrolling, allowing easy access to navigation and cart actions.
+
+*Actual Results:*
+When scrolling down, the top menu and Basket icon disappear from view, requiring the user to scroll back to the top to access them."
+Browse Sweets → Product prices are visually misaligned between sweet cards,SS-12,Bug,Medium,"*Steps to Reproduce*
+# Open the Browse Sweets page.
+# Observe the price text alignment across all product cards.
+
+*Expected Results:*
+All prices should be consistently aligned (vertically and horizontally) within each product card for a uniform appearance.
+
+*Actual Results:*
+Prices are visually misaligned between different product cards, causing uneven spacing and inconsistent UI layout."
+Broken image -> displayed for “Wham Bars” product,SS-11,Bug,Medium,"*Steps to Reproduce:*
+# Open the Browse Sweets page.
+# Scroll to locate the Wham Bars product card.
+
+*Expected Results:*
+The product image for Wham Bars should be displayed correctly, matching the other sweets on the page.
+
+*Actual Results:*
+A broken image icon is shown instead of the product image for Wham Bars, indicating a missing or invalid image source link."
+Browse Sweets -> No feedback confirming addition to basket,SS-10,Bug,Medium,"*Steps to Reproduce:*
+# Open the Browse Sweets page.
+# Select any sweet and click the Add to Basket button.
+
+*Expected Results:*
+After clicking Add to Basket, the system should provide visual or textual feedback (e.g., a confirmation message, animation, or basket count update) to indicate that the item was successfully added.
+
+*Actual Results:*
+No confirmation message, animation, or basket update is displayed after adding an item, leaving the user unsure whether the action succeeded."
+Login Page → System accepts any password for any email address,SS-9,Bug,Medium,"*Steps to Reproduce:*
+# Open the Login page
+# Enter any valid email address.
+# Enter any random password.
+# Click the Login button.
+
+
+*Expected Results:*
+The system should validate the entered credentials and only allow login with the correct email–password combination. Invalid credentials should trigger an error message.
+
+*Actual Results:*
+The system logs in successfully with any random password, without validating credentials against the user’s email."
+Login Page → Tab navigation moves focus to logo hyperlink instead of Password field,SS-8,Bug,Medium,"*Steps to Reproduce:*
+# Open the Login page.
+# Click on the Email address input field.
+# Enter any text in the email field.
+# Press the Tab key to switch to the next input.
+
+*Expected Results:*
+Pressing Tab should move the cursor focus from the Email address field directly to the Password field.
+
+*Actual Results:*
+Pressing Tab shifts the focus to the website logo (home page hyperlink) instead of the Password field, interrupting the expected input flow."
